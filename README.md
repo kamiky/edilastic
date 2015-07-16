@@ -3,6 +3,9 @@
 ### What is it ?
 **[AngularJS plugin](http://angularjs.org/) :** Use to easily edit your content by switching between ```<div> <span>``` (etc...) and ```<input> or <textarea>```
 
+### Install
+``` npm install edilastic ```
+
 ### How to use ?
 1. Add to your module dependency ```var app = angular.module('myApp', ['edilastic'])```
 2. Markup your DOM element ```<h1 edilastic="mymodel" onconfirm="confirm(mymodel)">```
