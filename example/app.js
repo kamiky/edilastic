@@ -1,8 +1,7 @@
-var app = angular.module('myApp', [
-	'edilastic',
-	])
+var app = angular.module('myApp', ['edilastic'])
 .controller('MainCtrl', ['$scope', '$rootScope',
 	function ($scope, $rootScope) {
+		/* (1) */
 		$scope.firstTemplate=  '<div class="template template1" edilastic="firstContent" onconfirm="update(firstContent)"> '+
 			'{{firstContent}}'+
 		'</div>';
@@ -13,6 +12,7 @@ var app = angular.module('myApp', [
 			// ajax request
 		}
 
+		/* (2) */
 		$scope.secondTemplate = '<div class="template template2" edilastic="secondContent" onconfirm="update2(secondContent)" type="textarea">'+
 			'{{secondContent}}'+
 		'</div>';
@@ -24,6 +24,7 @@ var app = angular.module('myApp', [
 			$scope.i2 = "confirm : "+content;
 		}
 
+		/* (3) */
 		$scope.thirdContent = "Ny name is : ";
 		$scope.thirdTemplate = '<div class="template template3" edilastic="thirdContent" onconfirm="update3(thirdContent)" onclose="close3()" shut="button">'+
 			'{{thirdContent}}'+
@@ -34,4 +35,13 @@ var app = angular.module('myApp', [
 		$scope.update3 = function(content) {
 			$scope.i3 = "confirm : "+content;
 		}
+
+		/* (4) */
+		$scope.settings = {
+			type:"textarea",
+			shut:"button",
+			clone:"false",
+			textareaTemplate:"<textarea class=\"edilastic-last\"></textarea>",
+		};
+		$scope.lastContent = "last content.";
 	}]);

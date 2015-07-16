@@ -74,6 +74,7 @@ app.directive('edilastic', ['$window', '$timeout', function ($window, $timeout) 
 					for (var key in settings.attrs) {
 						if (attrs[key]) self[key] = $scope.$eval(attrs[key]) || attrs[key];
 					}
+					console.log(this);
 					$timeout(function(){self.initialize()}, 0);
 				}
 
@@ -86,7 +87,8 @@ app.directive('edilastic', ['$window', '$timeout', function ($window, $timeout) 
 					if (self.tid) {
 						self.input.attr('id', self.tid);
 					}
-					if (self.clone) {
+					if (self.clone == true) {
+						console.log('clone...');
 						self.input.addClass(originalClassNames);
 					}
 					self.form = angular.element("<form class=\"edilastic-form\" style=\"display:none; margin:0px\"></form>");
