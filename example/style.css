@@ -1,0 +1,67 @@
+body{
+	margin:0px;
+	padding:0px;
+	font-family: arial;
+}
+
+.container{
+	padding:20px;
+}
+
+.template{
+	margin:10px 0px;
+	font-size:14px;
+	background-color:#EAEAEA;
+	border:1px solid #EAEAEA;
+	font-family: Times;
+}
+
+.template1{
+	line-height: 30px;
+	padding:0px 10px;
+}
+.template2{
+	width:100px;
+	padding:10px;
+
+	/* important to keep same width / height between div and textarea */
+	box-sizing: border-box;
+}
+.template3{
+	width:300px;
+	line-height: 20px;
+	padding:0px 10px;
+}
+
+.i{
+	font-size:11px;
+	color:#04BC04;
+}
+
+.code{
+	background-color: #535353;
+	color: #ECECEC;
+	padding: 5px;
+	font-family: arial;;
+}
+
+h1{
+	margin:5px 0px;
+	font-size:14px;
+}
+.edilastic-open{
+	border:1px dashed black;
+}
+input.edilastic-open{
+	width:100%;
+	border:1px dashed black;
+}
+
+textarea.edilastic-open{
+	resize:none;
+}
+
+form.edilastic-form{
+	width:100%;
+	overflow:hidden;
+}

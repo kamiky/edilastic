@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Edilastic</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+	<script src="../edilastic.js"></script>
+	<script src="app.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="MainCtrl">
+	<div class="container">
+		<h1>1. Edilastic input :</h1>
+		<div class="code">{{firstTemplate}}</div>
+		- class names are copied from original element</br>
+		- onconfirm is triggered when user clicks out of input
+		<div class="template template1" edilastic="firstContent" onconfirm="update(firstContent)">
+			{{firstContent}}
+		</div>
+		<div class="i" ng-show="i1">{{i1}}</div>
+		<hr>
+		<h1>2. Edilastic textarea :</h1>
+		<div class="code">{{secondTemplate}}</div>
+		- autoresize (elastic:true)</br>
+		- onopen / onconfirm
+		<div class="template template2" edilastic="secondContent" onconfirm="update2(secondContent)" onopen="open2()" type="textarea">
+			{{secondContent}}
+		</div>
+		<div class="i" ng-show="i2">{{i2}}</div>
+		<hr>
+		<h1>3. Edilastic input with button :</h1>
+		<div class="code">{{thirdTemplate}}</div>
+		- shut:"button"</br>
+		- onopen / onconfirm
+		<div class="template template1" edilastic="thirdContent" onconfirm="update3(thirdContent)" onclose="close3()" shut="button">
+			{{thirdContent}}
+		</div>
+		<div class="i" ng-show="i3">{{i3}}</div>
+		<hr>
+	</div>
+</body>
+</html>
