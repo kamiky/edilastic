@@ -62,9 +62,9 @@ app.directive('edilastic', ['$window', '$timeout', function ($window, $timeout) 
 			var originalClassNames = iElement.attr('class');
 			return function ($scope, element, attrs) {
 				function EdilasticDirective() {
-					if (!$scope.value) {
+					/*if (typeof $scope.value === "undefined") {
 						throw "Error : no scope model is assigned to the edilastic directive (e.g <div edilastic=\"model\"> is required)";
-					}
+					}*/
 					var self = this;
 					var options = $scope.$eval(attrs.options);
 					angular.extend(this, settings.attrs, settings.options, options, {
